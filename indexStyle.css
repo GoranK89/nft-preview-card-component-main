@@ -1,0 +1,128 @@
+    /*------ Global color variables* --------*/
+:root {
+  --VeryDarkBlueMain: hsl(217, 54%, 11%);
+  --VeryDarkBlueCard: hsl(216, 50%, 16%);
+  --VeryDarkBlueLine: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+  --SoftBlue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+}
+
+body {
+    background-color: var(--VeryDarkBlueMain);
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+}
+
+    /*------ The whole NFT container -----*/
+#nftContainer {
+    display: flex;
+    justify-content: center;
+    color: var(--SoftBlue);
+}
+
+/*------ The NFT card with picture, description, price and author ------*/
+#nftCard {
+    background-color: var(--VeryDarkBlueCard);
+    padding: 25px;
+    margin: 100px 0 100px 0;
+    border-radius: 20px;
+    width: 250px;
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figure img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#overlay {
+  position: absolute;           /* with abosulute position and same height/width as the img we get an overlay for the nftImg */
+  height: 250px;
+  width: 250px;
+  opacity: 0;
+  transition: .3s ease;
+  border-radius: 10px;
+  display: flex;                /* displays the eye img in the center */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+#overlay:hover {
+    background-color: var(--Cyan);
+    opacity: 0.5;
+}
+#overlay img {
+    width: 40px;
+    height: auto;
+}
+
+figure figcaption, figure a {  /* this uses the same background color as the #nftCard, overriding the cyan background from figure*/
+    background-color: var(--VeryDarkBlueCard);
+}
+
+figcaption {
+    font-size: 22px;
+    padding: 10px 0 10px 0;
+}
+    /* figcaption link styling */
+#nftFigcaption {
+    text-decoration: none;
+    color: var(--White);
+    margin-right: 73px;
+}
+#nftFigcaption:hover {
+    color: var(--Cyan);
+}
+
+    /*---- The nftInfo box (price and days left) ----*/
+#nftInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+#nftInfo p img {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+    /*-- Styling the price and ETH symbol --*/
+#nftPrice {
+    color: var(--Cyan);
+}
+#nftPrice img {
+    padding-right: 5px;
+}
+
+    /*-- Styling the nft AUTHOR picture and text --*/
+#nftAuthor {
+    display: flex;
+    border-top: solid 2px var(--VeryDarkBlueLine);
+    padding-top: 20px;
+}
+
+#nftAuthorLink {
+    padding-left: 2px;
+    text-decoration: none;
+    color: var(--White);
+}
+#nftAuthorLink:hover {
+    color: var(--Cyan);
+}
+
+#nftAuthor img {
+    border: solid 2px var(--White);
+    border-radius: 50%;
+    margin-right: 7px;
+    vertical-align: middle;
+}
+
