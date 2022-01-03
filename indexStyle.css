@@ -50,10 +50,10 @@ figure img {
   opacity: 0;
   transition: .3s ease;
   border-radius: 10px;
-  display: flex;                /* displays the eye img in the center */
+  display: flex;               
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-around; /* displays the eye img in the center */
 }
 #overlay:hover {
     background-color: var(--Cyan);
@@ -62,10 +62,6 @@ figure img {
 #overlay img {
     width: 40px;
     height: auto;
-}
-
-figure figcaption, figure a {  /* this uses the same background color as the #nftCard, overriding the cyan background from figure*/
-    background-color: var(--VeryDarkBlueCard);
 }
 
 figcaption {
