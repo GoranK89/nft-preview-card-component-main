@@ -64,9 +64,9 @@ figure img {
     height: auto;
 }
 
-figcaption {
-    font-size: 22px;
-    padding: 10px 0 10px 0;
+h1 {
+    font-size: 18px;
+    margin-right: 29px;
 }
     /* figcaption link styling */
 #nftFigcaption {
